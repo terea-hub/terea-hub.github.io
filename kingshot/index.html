@@ -23,7 +23,7 @@
             background-color: rgba(255, 255, 255, 0.05);
         }
     </style>
-</head>
+</head>terea-hub.github.io-main
 <body>
 
     <!-- ナビゲーション -->
@@ -38,7 +38,7 @@
     <header class="max-w-2xl mx-auto px-6 py-20">
         <h1 class="text-3xl font-bold text-white mb-4 tracking-tight">Kingshot Guide</h1>
         <p class="text-sm text-zinc-500 leading-relaxed max-w-md">
-            戦略と、ゲーム進行、価値観の共有を<br>
+            戦略と、同盟イベント進行、価値観の共有を<br>
             ミニマルかつ本質的な攻略アーカイブ（になる予定）
         </p>
     </header>
@@ -51,7 +51,31 @@
             <h2 class="text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] mb-6">Index</h2>
             <div class="space-y-1">
                 <a href="#sword" class="flex justify-between items-center py-4 border-b chic-border hover:text-white transition-colors group">
-                    <span class="text-lg font-medium tracking-tight">聖剣争奪戦</span>
+                    <button
+                        type="button"
+                        id="expand-sword"
+                        class="text-lg font-medium tracking-tight flex items-center gap-2 group focus:outline-none"
+                        aria-expanded="false"
+                        aria-controls="sword-options"
+                    >
+                        聖剣争奪戦
+                    </button>
+                    <div id="sword-options" class="hidden mt-2 pl-4 space-y-1">
+                        <a href="Swordland.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">ゲーム進行</a>
+                        <a href="Swordland_rally.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">都市攻撃の考え方</a>
+                        <span class="block text-sm font-medium text-zinc-300 px-2 py-1">施設攻撃・駐屯の考え方</span>
+                    </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const expandBtn = document.getElementById("expand-sword");
+                            const expandContent = document.getElementById("sword-options");
+                            expandBtn.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                expandContent.classList.toggle("hidden");
+                                expandBtn.setAttribute('aria-expanded', !expandContent.classList.contains("hidden"));
+                            });
+                        });
+                    </script>
                     <svg class="w-4 h-4 text-zinc-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                 </a>
                 <a href="#alliance" class="flex justify-between items-center py-4 border-b chic-border hover:text-white transition-colors group">

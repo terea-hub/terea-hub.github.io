@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聖剣争奪戦ガイド - Kingshot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #0a0a0a;
+            color: #d4d4d8;
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+        .chic-border {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .hover-bg:active {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- ナビゲーション -->
+    <nav class="border-b chic-border bg-[#0a0a0a]/90 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-2xl mx-auto px-6 h-16 flex justify-between items-center">
+            <span class="text-sm font-bold tracking-widest text-white uppercase">Kingshot Guide</span>
+            <span class="text-[10px] tracking-[0.2em] text-zinc-500 uppercase font-medium">Produced by TEREA</span>
+        </div>
+    </nav>
+
+    <!-- ヒーロー -->
+    <header class="max-w-2xl mx-auto px-6 py-12">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 tracking-tight">聖剣争奪戦 攻略ガイド</h1>
+        <p class="text-sm text-zinc-500 leading-relaxed max-w-md">
+            イベント「聖剣争奪戦」の流れと戦い方を<br>
+            参加者と共有できるようにまとめました。
+        </p>
+    </header>
+
+    <main class="max-w-2xl mx-auto px-6 pb-24 space-y-14">
+        <!-- セクション０ -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-2 flex items-center gap-2">０．前準備</h2>
+            <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1 mb-4">
+                <li>ゲーム進行を確認</li>
+                <li>自分が赴くエリアや役割（攻撃・防衛・連絡役など）を把握</li>
+                <li>エース英雄編成／駐屯編成／集結ノリ編成の保存を準備</li>
+                <li>必要ならマップ情報も再確認</li>
+            </ul>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                <img src="img/swordland_showdown_MAP.jpg" alt="聖剣争奪戦マップ1" class="rounded border chic-border max-w-xs sm:max-w-sm w-full shadow"/>
+                <img src="img/swordland_showdown_MAP2.jpg" alt="聖剣争奪戦マップ2" class="rounded border chic-border max-w-xs sm:max-w-sm w-full shadow"/>
+            </div>
+            <p class="text-xs text-zinc-400 mt-2 text-center">※画像タップで拡大可能です（スマホ標準機能等）</p>
+        </section>
+
+        <!-- セクション１ -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-2 flex items-center gap-2">１．開始前</h2>
+            <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1">
+                <li>専用チャットを開き、参加を投稿（スタンプでも可）</li>
+                <li>地図で担当エリアを確認し、優先施設付近へ転移</li>
+                <li>施設から少し離れた場所に分散すると都市攻撃を受けにくい</li>
+            </ul>
+        </section>
+
+        <!-- セクション２ -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-2 flex items-center gap-2">２．開始～１５分（最重要）</h2>
+            <div class="space-y-2 text-sm leading-relaxed">
+                <div>
+                    <span class="font-semibold">目的：</span>施設の初回支配ポイントを確保
+
+                    <div class="mt-2">
+                        <a href="img/swordland_showdown_MAP3.jpg" target="_blank" rel="noopener">
+                            <img src="img/swordland_showdown_MAP3.jpg" alt="聖剣争奪戦マップ3" class="rounded border chic-border max-w-xs sm:max-w-sm w-full shadow mx-auto transition-transform duration-150 hover:scale-105 cursor-zoom-in"/>
+                        </a>
+                    </div>
+                </div>
+                <ul class="list-disc ml-5 space-y-1">
+                    <li>担当エリアの施設を攻撃し、初回支配ポイントを獲得するまで駐屯</li>
+                    <li>敵を確認したら都市集結攻撃（単騎攻撃は兵損が大きい）</li>
+                    <li>初回駐屯を取られても奪い返すか都市を飛ばせばOK</li>
+                    <li>都市攻撃を受けた場合は都市援軍で防衛</li>
+                </ul>
+            </div>
+            <div class="mt-4">
+                <h3 class="font-bold text-white mb-1">優先度</h3>
+                <div class="flex flex-col gap-1 text-xs">
+                    <div><span class="font-bold text-yellow-300">★★★★</span> <span class="font-semibold">鐘楼・厩舎</span></div>
+                    <div><span class="font-bold text-yellow-200">★★★☆</span> <span class="font-semibold">味方都市</span></div>
+                    <div><span class="font-bold text-yellow-100">★★☆☆</span> <span class="font-semibold">聖域</span></div>
+                    <div><span class="font-bold text-yellow-50">★☆☆☆</span> <span class="font-semibold">修道院</span></div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <h3 class="font-bold text-white mb-1">施設戦の基本</h3>
+                <ul class="list-disc ml-5 space-y-1">
+                    <li>敵施設への攻撃は集結を使用</li>
+                    <li>集結前に座標を共有しメンバー呼び掛け</li>
+                </ul>
+            </div>
+            <div class="mt-4">
+                <h3 class="font-bold text-white mb-1">防衛困難な場合</h3>
+                <ul class="list-disc ml-5 space-y-1">
+                    <li>駐屯メンバーを送還</li>
+                    <li>チャットに座標を貼り「負ける～欠片拾いお願い」と共有</li>
+                </ul>
+            </div>
+            <div class="mt-4">
+                <h3 class="font-bold text-white mb-1">都市攻撃を受けた場合</h3>
+                <ul class="list-disc ml-5 space-y-1">
+                    <li>エース英雄で防衛</li>
+                    <li>勝ち目がない場合は兵士を占領・駐屯出征させ兵損回避</li>
+                </ul>
+            </div>
+            <div class="mt-4">
+                <h3 class="font-bold text-white mb-1">欠片拾い（重要）</h3>
+                <ul class="list-disc ml-5 space-y-1">
+                    <li>敵施設の欠片は重要な得点源</li>
+                    <li>敵施設を無理に奪い返す必要はない</li>
+                    <li>欠片が溜まったタイミングで再奪還すると敵の欠片が半分飛び散る</li>
+                    <li>飛び散った欠片を回収する</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- セクション３ -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-2 flex items-center gap-2">３．１５分経過～</h2>
+            <div class="flex flex-col gap-4 items-center justify-center my-4">
+                <a href="img/swordland_showdown_MAP5.jpg" target="_blank">
+                    <img src="img/swordland_showdown_MAP5.jpg" alt="Swordland Showdown MAP5" class="rounded border chic-border max-w-xs sm:max-w-sm w-full shadow hover:cursor-zoom-in" />
+                </a>
+                <a href="img/swordland_showdown_MAP6.jpg" target="_blank">
+                    <img src="img/swordland_showdown_MAP6.jpg" alt="Swordland Showdown MAP6" class="rounded border chic-border max-w-xs sm:max-w-sm w-full shadow hover:cursor-zoom-in" />
+                </a>
+            </div>
+        </section>
+        <div class="mb-3">
+            <span class="block font-bold text-white mb-1">解放施設</span>
+            <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1">
+                <li><span class="font-bold text-yellow-200">傭兵駐屯地</span></li>
+                <li><span class="font-bold text-yellow-200">強化の間</span></li>
+                <li><span class="font-bold text-rose-200">聖剣祭壇</span></li>
+                <li><span class="text-xs text-zinc-400">※<span class="font-semibold">鐘楼・厩舎の支配</span>は可能なら継続</span></li>
+            </ul>
+        </div>
+        <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1">
+            <li>傭兵駐屯地・強化の間を確保</li>
+            <li><span class="font-bold text-rose-200">聖剣祭壇の初回占領は可能なら最優先</span></li>
+            <li><span class="text-xs text-rose-300">※祭壇は2分ごとに<span class="font-bold">駐屯兵士10％負傷</span></span></li>
+            <li><span class="font-bold">長時間駐屯は避ける</span></li>
+            <li><span class="font-bold">（戦力も分散するので元エリア再構築を行う）</span></li>
+        </ul>
+
+
+
+
+        <!-- セクション４ -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-2 flex items-center gap-2">４．２０分経過～</h2>
+            <div class="flex justify-center my-4">
+                <a href="img/swordland_showdown_MAP4.jpg" target="_blank">
+                    <img 
+                        src="img/swordland_showdown_MAP4.jpg" 
+                        alt="Swordland Showdown MAP4"
+                        class="rounded border chic-border max-w-xs sm:max-w-sm w-full shadow hover:cursor-zoom-in"
+                    />
+                </a>
+            </div>
+            <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1">
+                <li>隠された地下室 解放</li>
+                <li>手すき部隊いれば全員で対応</li>
+                <li>兵士1名で採集, ただし施設防衛も必要</li>
+            </ul>
+
+        </section>
+
+        <!-- セクション５ -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-2 flex items-center gap-2">５．終了５分前</h2>
+            <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1">
+                <li>聖剣祭壇を多くの集結で再奪還</li>
+                <li>奪取後は欠片回収</li>
+            </ul>
+        </section>
+
+        <!-- その他 -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-2 flex items-center gap-2">その他メモ</h2>
+            <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1">
+                <li>無料加速の使用推奨</li>
+                <li>回復が追いつかない場合は12分離脱OK</li>
+                <li>離脱時は必ずチャットで宣言</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
