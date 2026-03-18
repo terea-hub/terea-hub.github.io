@@ -78,7 +78,30 @@
                     </script>
                 </a>
                 <a class="flex justify-between items-center py-4 border-b chic-border hover:text-white transition-colors group">
-                    <span class="text-lg font-medium tracking-tight">三盟争覇戦</span>
+                    <button
+                        type="button"
+                        id="expand-tri"
+                        class="text-lg font-medium tracking-tight flex items-center gap-2 group focus:outline-none"
+                        aria-expanded="false"
+                        aria-controls="tri-options"
+                    >
+                        三盟争覇戦
+                    </button>
+                    <div id="tri-options" class="hidden mt-2 pl-4 space-y-1">
+                        <a href="tri_alliance/progress.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">ゲームの進行</a>
+                        <a href="tri_alliance/battle_mechanics.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">戦闘解説</a>
+                    </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const expandBtn = document.getElementById("expand-tri");
+                            const expandContent = document.getElementById("tri-options");
+                            expandBtn.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                expandContent.classList.toggle("hidden");
+                                expandBtn.setAttribute('aria-expanded', !expandContent.classList.contains("hidden"));
+                            });
+                        });
+                    </script>
                 </a>
             </div>
         </section>
