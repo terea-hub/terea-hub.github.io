@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三盟争覇戦 戦闘解説 - Kingshot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #0a0a0a;
+            color: #d4d4d8;
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+        .chic-border {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .hover-bg:active {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .zoomable {
+            cursor: zoom-in;
+        }
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+        #lightbox.active {
+            display: flex;
+        }
+        #lightbox img {
+            max-width: 95vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ナビゲーション -->
+    <nav class="border-b chic-border bg-[#0a0a0a]/90 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-2xl mx-auto px-6 h-16 flex justify-between items-center">
+            <span class="text-sm font-bold tracking-widest text-white uppercase">Kingshot Guide</span>
+            <span class="text-[10px] tracking-[0.2em] text-zinc-500 uppercase font-medium">Produced by TEREA</span>
+        </div>
+    </nav>
+
+    <!-- ヒーロー -->
+    <header class="max-w-2xl mx-auto px-6 py-12">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 tracking-tight">三盟争覇戦 戦闘解説</h1>
+        <p class="text-sm text-zinc-500 leading-relaxed max-w-md">
+            戦闘の仕組みと、突撃・撤退の使い方を<br>
+            理解するためのガイドです。
+        </p>
+    </header>
+
+    <main class="max-w-2xl mx-auto px-6 pb-24 space-y-14">
+
+        <!-- セクション1 -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-3 flex items-center gap-2">１．戦闘の基本構造：キュー制</h2>
+            <p class="text-sm leading-relaxed text-zinc-400 mb-4">
+                拠点ごとに「待機列（キュー）」が作られ、到着順に <span class="text-white font-semibold">1対1の自動バトル</span> が繰り返される仕組みです。
+            </p>
+
+            <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1 text-zinc-400 mb-4">
+                <li>攻撃側・防御側が到着順に1対1で戦う</li>
+                <li>1試合は <span class="text-white font-semibold">10秒</span>（神殿などは5秒）</li>
+                <li>勝った部隊は待機列の最後尾へ、負けた部隊は本拠地へ戻る</li>
+            </ul>
+
+            <p class="text-sm leading-relaxed text-zinc-400">
+                ラリー（集結攻撃）は存在しません。英雄の強さやバフが直接勝敗を左右する、<span class="text-white font-semibold">ソロ部隊同士の連戦</span>です。
+            </p>
+            <p class="text-sm leading-relaxed text-zinc-400 mt-2">
+                この仕組みを前提に、待機列が<span class="text-white font-semibold">5列以上</span>になると使える2つの上級アクション「突撃」と「撤退」が解放されます。
+            </p>
+
+            <div class="flex justify-center my-4">
+                <img
+                    src="img/Advance.png"
+                    alt="突撃（Advance）の概念図"
+                    class="rounded border chic-border max-w-xs sm:max-w-sm w-full shadow zoomable"
+                />
+            </div>
+        </section>
+
+        <!-- セクション2 -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-3 flex items-center gap-2">２．突撃（Advance）：攻めの再配置</h2>
+            <p class="text-sm leading-relaxed text-zinc-400 mb-4">
+                待機列5列目以降の部隊を、クリスタルを消費して<span class="text-white font-semibold">次の建物へ直接送り込む</span>アクションです。
+            </p>
+
+            <div class="flex justify-center my-4">
+                <img
+                    src="img/Que.png"
+                    alt="キュー制の概念図"
+                    class="rounded border chic-border max-w-xs sm:max-w-sm w-full shadow zoomable"
+                />
+            </div>
+
+            <div class="mb-3">
+                <span class="block font-bold text-white mb-1">できること</span>
+                <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1 text-zinc-400">
+                    <li>前の拠点の決着を待たずに、次の拠点を先に攻め始められる</li>
+                    <li>敵が撤退して回復する隙を与えず、再参戦を防げる</li>
+                    <li>敵の背後に回って増援ルートを断てる</li>
+                </ul>
+            </div>
+
+            <div class="bg-zinc-900 border chic-border rounded px-4 py-3 text-sm text-zinc-400 leading-relaxed">
+                <span class="font-bold text-yellow-200">注意点：</span>
+                突撃先ですぐ撃破されると、クリスタル＋復活コストで逆効果になります。ある程度粘れる部隊で使うのが基本です。
+            </div>
+        </section>
+
+        <!-- セクション3 -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-3 flex items-center gap-2">３．撤退（Retreat）：守りの再整備</h2>
+            <p class="text-sm leading-relaxed text-zinc-400 mb-4">
+                待機列5列目以降の部隊を、クリスタルを消費して<span class="text-white font-semibold">1つ手前の建物へ下げる</span>アクションです。「逃げ」ではなく、戦力を立て直して再投入するための積極的な選択です。
+            </p>
+
+            <div class="mb-3">
+                <span class="block font-bold text-white mb-1">できること</span>
+                <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1 text-zinc-400">
+                    <li>戦闘外の建物に下がることで<span class="text-white font-semibold">徴兵（即時フル回復）</span>が可能になる</li>
+                    <li>全滅前に撤退することで、復活待ち＋再移動のロスを回避できる</li>
+                    <li>占拠タイミングの調整：最後の衛兵を倒す順番を意図的にずらし、狙った部隊に占拠権を渡せる</li>
+                </ul>
+            </div>
+
+            <div class="mt-3">
+                <span class="block font-bold text-white mb-1">運用のコツ</span>
+                <p class="text-sm leading-relaxed text-zinc-400">
+                    主力部隊が損耗してきたら<span class="text-white font-semibold">撤退→徴兵→再参戦</span>のサイクルを回すのが基本。その間、2軍・3軍が時間を稼ぐ連携が効果的です。
+                </p>
+            </div>
+
+            <div class="flex justify-center my-4">
+                <img
+                    src="img/conscription.png"
+                    alt="徴兵の概念図"
+                    class="rounded border chic-border max-w-xs sm:max-w-sm w-full shadow zoomable"
+                />
+            </div>
+        </section>
+
+        <!-- セクション4 -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-3 flex items-center gap-2">４．突撃と撤退を組み合わせる</h2>
+            <p class="text-sm leading-relaxed text-zinc-400 mb-4">
+                2つのアクションは、セットで使うことで真価を発揮します。
+            </p>
+
+            <ul class="list-disc ml-5 text-sm leading-relaxed space-y-2 text-zinc-400">
+                <li>主力が撤退して回復している間に、<span class="text-white font-semibold">別部隊が突撃してラインを維持する</span></li>
+                <li>相手も撤退・回復を繰り返して泥試合になりそうな場合は、<span class="text-white font-semibold">突撃で敵の回復場所を奪う</span></li>
+            </ul>
+
+            <p class="text-sm leading-relaxed text-zinc-400 mt-4">
+                どちらか一方だけでなく、状況に応じて使い分けることが<span class="text-white font-semibold">戦線維持のカギ</span>です。
+            </p>
+        </section>
+
+    </main>
+
+    <!-- ライトボックス -->
+    <div id="lightbox">
+        <img id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        document.querySelectorAll('.zoomable').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+    </script>
+
+    <!-- フッター -->
+    <footer class="border-t chic-border py-12">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <p class="text-[10px] tracking-[0.3em] text-zinc-600 font-bold uppercase">
+                Produced by TEREA &copy; 2026
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

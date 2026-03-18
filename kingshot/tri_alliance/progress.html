@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三盟争覇戦 進行ガイド - Kingshot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #0a0a0a;
+            color: #d4d4d8;
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+        .chic-border {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .hover-bg:active {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .zoomable {
+            cursor: zoom-in;
+        }
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+        #lightbox.active {
+            display: flex;
+        }
+        #lightbox img {
+            max-width: 95vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ナビゲーション -->
+    <nav class="border-b chic-border bg-[#0a0a0a]/90 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-2xl mx-auto px-6 h-16 flex justify-between items-center">
+            <span class="text-sm font-bold tracking-widest text-white uppercase">Kingshot Guide</span>
+            <span class="text-[10px] tracking-[0.2em] text-zinc-500 uppercase font-medium">Produced by TEREA</span>
+        </div>
+    </nav>
+
+    <!-- ヒーロー -->
+    <header class="max-w-2xl mx-auto px-6 py-12">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 tracking-tight">三盟争覇戦 進行ガイド</h1>
+        <p class="text-sm text-zinc-500 leading-relaxed max-w-md">
+            フェーズごとの動き方と、勝つための立ち回りを<br>
+            理解するためのガイドです。
+        </p>
+    </header>
+
+    <main class="max-w-2xl mx-auto px-6 pb-24 space-y-14">
+
+        <!-- セクション1 -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-3 flex items-center gap-2">第1フェーズ（開始〜20分）：中立建物の占領</h2>
+
+            <div class="space-y-8">
+
+                <!-- やること -->
+                <div>
+                    <span class="block font-bold text-white mb-2">やること</span>
+                    <p class="text-sm leading-relaxed text-zinc-400 mb-3">
+                        自陣側の中立建物をいかに早く占領するかが最初の勝負です。占領することで<span class="text-white font-semibold">ポイントリード</span>と、クリスタル回復を早める<span class="text-white font-semibold">隊長（守護者）枠</span>を確保できます。
+                    </p>
+                    <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1 text-zinc-400">
+                        <li>待機列が長い場合は<span class="text-white font-semibold">突撃</span>を使って占領を加速する</li>
+                        <li>最後の守備兵を倒した同盟が占領権を得るため、部隊を絶え間なく送り込む</li>
+                    </ul>
+                </div>
+
+                <!-- 隊長の任命 -->
+                <div>
+                    <span class="block font-bold text-white mb-2">隊長の任命（指揮官・R4・R5のみ）</span>
+                    <p class="text-sm leading-relaxed text-zinc-400 mb-3">
+                        占領した建物にはすぐ隊長を任命し、クリスタルの蓄積を始めます。
+                    </p>
+                    <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1 text-zinc-400">
+                        <li>序盤はクリスタルが少ないメンバーへ優先的に</li>
+                        <li>前線が活発になったら、激しく戦うメンバーへ切り替えて部隊を維持しやすくする</li>
+                    </ul>
+                </div>
+
+                <!-- 20分直前の動き -->
+                <div>
+                    <span class="block font-bold text-white mb-2">20分直前の動き</span>
+                    <p class="text-sm leading-relaxed text-zinc-400 mb-2">
+                        20分になると<span class="text-white font-semibold">守護隊キャンプのシールドが解除</span>されます。高ポイント＋強力なエネルギー回復枠（ゴールド枠）を持つ重要拠点のため、直前に部隊を目の前で待機させておくのが有効です。
+                    </p>
+                    <p class="text-sm leading-relaxed text-zinc-400">
+                        また、敵の裏取りにも注意。マップ全体を広く見て、背後の建物が奇襲されていないか確認しましょう。
+                    </p>
+                </div>
+
+                <!-- まとめ -->
+                <div class="bg-zinc-900 border chic-border rounded px-4 py-3 text-sm text-zinc-400 leading-relaxed">
+                    20分まではスピード優先。防衛ラインを意識しながら、敵が嫌がる場所へ牽制しつつ好機があれば<span class="text-white font-semibold">敵の守護隊キャンプを狙う</span>気持ちで動くのがコツです。
+                </div>
+
+                <div class="flex justify-center">
+                    <img
+                        src="img/progress1.png"
+                        alt="第1フェーズ概念図"
+                        class="rounded border chic-border max-w-xs sm:max-w-sm w-full shadow zoomable"
+                    />
+                </div>
+
+            </div>
+        </section>
+
+        <!-- セクション2 -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-3 flex items-center gap-2">第2フェーズ（20分〜40分）：守護隊キャンプの争奪</h2>
+
+            <div class="space-y-8">
+
+                <!-- 最優先目標 -->
+                <div>
+                    <span class="block font-bold text-white mb-2">最優先目標：守護隊キャンプを抑える</span>
+                    <p class="text-sm leading-relaxed text-zinc-400 mb-3">
+                        20分でシールドが解除される守護隊キャンプは、このフェーズの<span class="text-white font-semibold">最重要拠点</span>です。
+                    </p>
+                    <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1 text-zinc-400">
+                        <li>毎分 <span class="text-white font-semibold">1,800pt</span>（中央神殿と同等）を生成</li>
+                        <li><span class="text-white font-semibold">ゴールド隊長枠</span>（クリスタル回復+60,000/分）を提供</li>
+                        <li>敵の守護隊キャンプを奪うと、ポイント停止＋補給路の遮断にもなる</li>
+                    </ul>
+                </div>
+
+                <!-- クリスタル管理 -->
+                <div>
+                    <span class="block font-bold text-white mb-2">クリスタル管理</span>
+                    <p class="text-sm leading-relaxed text-zinc-400">
+                        確保したゴールド枠には、前線で最も激しく戦うメンバーを優先的に任命します。建物を奪われると隊長枠が失われるため、指揮官は<span class="text-white font-semibold">隊長ウィンドウを常に監視</span>し、空きスロットを作らないよう再配置を行います。
+                    </p>
+                </div>
+
+                <!-- 裏取りと三つ巴 -->
+                <div>
+                    <span class="block font-bold text-white mb-2">裏取りと三つ巴の駆け引き</span>
+                    <p class="text-sm leading-relaxed text-zinc-400 mb-2">
+                        敵が他同盟との戦闘に集中している隙に、<span class="text-white font-semibold">突撃で敵の背後にある手薄な建物を奪い補給を断つ</span>のが効果的です。
+                    </p>
+                    <p class="text-sm leading-relaxed text-zinc-400">
+                        独走している同盟がいる場合は、一時的に矛先を向けて均衡を保つ判断も必要になります。
+                    </p>
+                </div>
+
+                <!-- 40分への準備 -->
+                <div>
+                    <span class="block font-bold text-white mb-2">40分（中央神殿解放）への準備</span>
+                    <p class="text-sm leading-relaxed text-zinc-400">
+                        40分に「潮汐の神殿」が解放されます。数分前から<span class="text-white font-semibold">中央ルートへ戦力を集め始め</span>、敵が神殿へ向かうルート上の建物を事前に押さえておきましょう。
+                    </p>
+                </div>
+
+                <!-- まとめ -->
+                <div class="bg-zinc-900 border chic-border rounded px-4 py-3 text-sm text-zinc-400 leading-relaxed">
+                    このフェーズのテーマは<span class="text-white font-semibold">リソース確保・裏取り・位置取り</span>の3つを並行して進めること。40分の最終決戦に向けた準備を整える重要な時間帯です。
+                </div>
+
+                <div class="flex justify-center">
+                    <img
+                        src="img/progress2.png"
+                        alt="第2フェーズ概念図"
+                        class="rounded border chic-border max-w-xs sm:max-w-sm w-full shadow zoomable"
+                    />
+                </div>
+
+            </div>
+        </section>
+
+        <!-- セクション3 -->
+        <section>
+            <h2 class="text-lg font-bold text-white tracking-tight mb-3 flex items-center gap-2">第3フェーズ（40分〜終了）：中央神殿の争奪</h2>
+
+            <div class="space-y-8">
+
+                <!-- 神殿の特徴 -->
+                <div>
+                    <span class="block font-bold text-white mb-2">神殿の特徴：一発逆転が起きる理由</span>
+                    <p class="text-sm leading-relaxed text-zinc-400 mb-3">
+                        神殿には継続ポイント（毎分1,800pt）に加え、試合終了時に占領している同盟へ<span class="text-white font-semibold">50,000ptのボーナス</span>が付与されます。
+                    </p>
+                    <div class="bg-zinc-900 border chic-border rounded overflow-hidden text-sm mb-3">
+                        <div class="grid grid-cols-2 border-b chic-border">
+                            <div class="px-4 py-2 text-zinc-500 font-medium">比較</div>
+                            <div class="px-4 py-2 text-zinc-500 font-medium">ポイント</div>
+                        </div>
+                        <div class="grid grid-cols-2 border-b chic-border">
+                            <div class="px-4 py-2 text-zinc-400">20分間ずっと維持し続けた場合</div>
+                            <div class="px-4 py-2 text-zinc-400">36,000pt</div>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <div class="px-4 py-2 text-zinc-400">終了の瞬間だけ占領していた場合</div>
+                            <div class="px-4 py-2 text-white font-semibold">50,000pt</div>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed text-zinc-400">
+                        最後の1秒で逆転が起きるのはこのためです。
+                    </p>
+                </div>
+
+                <!-- 神殿は最後に奪うもの -->
+                <div>
+                    <span class="block font-bold text-white mb-2">神殿は「維持するもの」ではなく「最後に奪うもの」</span>
+                    <p class="text-sm leading-relaxed text-zinc-400 mb-3">
+                        40分の解放直後から全力で守り続けるのはリソースの浪費になりかねません。
+                    </p>
+                    <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1 text-zinc-400">
+                        <li>序盤は他の2同盟に神殿を争わせて消耗させる</li>
+                        <li>その間は他の建物を確実に確保して基礎ポイントを稼ぐ</li>
+                        <li><span class="text-white font-semibold">残り5分</span>で温存したクリスタルと全戦力を神殿に投入する</li>
+                    </ul>
+                </div>
+
+                <!-- 神殿占領のテクニック -->
+                <div>
+                    <span class="block font-bold text-white mb-2">神殿占領のテクニック</span>
+                    <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1 text-zinc-400">
+                        <li>最初の到着より、<span class="text-white font-semibold">最後の守備兵を倒す瞬間に部隊を滑り込ませる</span>のが占領のコツ</li>
+                        <li>主力が消耗したら即座に<span class="text-white font-semibold">撤退→徴兵→再投入</span>のサイクルを回す</li>
+                        <li>敗北した部隊はクリスタルを惜しまず即時復活させ、待機列を埋め続ける</li>
+                    </ul>
+                </div>
+
+                <!-- 周辺ルートの封鎖 -->
+                <div>
+                    <span class="block font-bold text-white mb-2">周辺ルートの封鎖も同時に</span>
+                    <p class="text-sm leading-relaxed text-zinc-400">
+                        神殿本体だけでなく、敵の補給ルート上の中継拠点を押さえて援軍を物理的に遮断するのが効果的です。敵が神殿に集中している隙に<span class="text-white font-semibold">守護隊キャンプを奪い、エネルギー供給を断つ</span>のも有効です。
+                    </p>
+                </div>
+
+                <!-- 残り5分の判断 -->
+                <div>
+                    <span class="block font-bold text-white mb-2">残り5分〜終了の判断</span>
+                    <ul class="list-disc ml-5 text-sm leading-relaxed space-y-1 text-zinc-400 mb-3">
+                        <li><span class="text-white font-semibold">僅差で負けている</span>→ 他の建物を捨ててでも全軍を神殿に投入する</li>
+                        <li><span class="text-white font-semibold">1位が圧倒的</span>→ 神殿を諦め、3位の建物を奪って2位報酬を確実に取る</li>
+                    </ul>
+                    <p class="text-sm leading-relaxed text-zinc-400">
+                        色々なケースが想定されますが、皆様の機転で乗り越え楽しみましょう！
+                    </p>
+                </div>
+
+                <!-- 注意 -->
+                <div class="bg-zinc-900 border chic-border rounded px-4 py-3 text-sm text-zinc-400 leading-relaxed">
+                    <span class="font-bold text-yellow-200">注意：</span>
+                    試合終了後の集計フェーズ中は退出禁止。退出すると報酬がもらえなくなります。
+                </div>
+
+                <div class="flex justify-center">
+                    <img
+                        src="img/progress3.png"
+                        alt="第3フェーズ概念図"
+                        class="rounded border chic-border max-w-xs sm:max-w-sm w-full shadow zoomable"
+                    />
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ライトボックス -->
+    <div id="lightbox">
+        <img id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        document.querySelectorAll('.zoomable').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+    </script>
+
+    <!-- フッター -->
+    <footer class="border-t chic-border py-12">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <p class="text-[10px] tracking-[0.3em] text-zinc-600 font-bold uppercase">
+                Produced by TEREA &copy; 2026
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
