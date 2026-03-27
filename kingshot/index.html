@@ -47,90 +47,103 @@
     <main class="max-w-2xl mx-auto px-6 pb-24 space-y-16">
         
         <!-- 目次 -->
-        <section>
-            <h2 class="text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] mb-6">Index</h2>
-            <div class="space-y-1">
-                <a class="flex justify-between items-center py-4 border-b chic-border hover:text-white transition-colors group">
-                    <button
-                        type="button"
-                        id="expand-sword"
-                        class="text-lg font-medium tracking-tight flex items-center gap-2 group focus:outline-none"
-                        aria-expanded="false"
-                        aria-controls="sword-options"
-                    >
-                        聖剣争奪戦
-                    </button>
-                    <div id="sword-options" class="hidden mt-2 pl-4 space-y-1">
-                        <a href="swordland/index.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">ゲーム進行</a>
-                        <a href="swordland/rally.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">都市攻撃の考え方</a>
-                        <a href="swordland/facility_control.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">施設攻撃・駐屯の考え方</a>
-                    </div>
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            const expandBtn = document.getElementById("expand-sword");
-                            const expandContent = document.getElementById("sword-options");
-                            expandBtn.addEventListener('click', function (e) {
-                                e.preventDefault();
-                                expandContent.classList.toggle("hidden");
-                                expandBtn.setAttribute('aria-expanded', !expandContent.classList.contains("hidden"));
-                            });
-                        });
-                    </script>
-                </a>
-                <a class="flex justify-between items-center py-4 border-b chic-border hover:text-white transition-colors group">
-                    <button
-                        type="button"
-                        id="expand-tri"
-                        class="text-lg font-medium tracking-tight flex items-center gap-2 group focus:outline-none"
-                        aria-expanded="false"
-                        aria-controls="tri-options"
-                    >
-                        三盟争覇戦
-                    </button>
-                    <div id="tri-options" class="hidden mt-2 pl-4 space-y-1">
-                        <a href="tri_alliance/progress.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">ゲームの進行</a>
-                        <a href="tri_alliance/battle_mechanics.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">戦闘解説</a>
-                    </div>
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            const expandBtn = document.getElementById("expand-tri");
-                            const expandContent = document.getElementById("tri-options");
-                            expandBtn.addEventListener('click', function (e) {
-                                e.preventDefault();
-                                expandContent.classList.toggle("hidden");
-                                expandBtn.setAttribute('aria-expanded', !expandContent.classList.contains("hidden"));
-                            });
-                        });
-                    </script>
-                </a>
-            </div>
-        </section>
+        <section class="space-y-10">
+            <h2 class="text-xs font-bold text-zinc-500 uppercase tracking-[0.2em]">Index</h2>
 
-        <!-- 各セクション -->
-        <section id="sword" class="scroll-mt-24">
-            <div class="mb-4 flex items-center space-x-2">
-                <span class="text-[10px] font-bold text-zinc-500 border border-zinc-700 px-1.5 py-0.5 rounded tracking-tighter uppercase">01</span>
-                <h3 class="text-xl font-bold text-white tracking-tight">聖剣争奪戦_Swordland Showdown</h3>
+            <!-- 同盟イベント -->
+            <div>
+                <p class="text-[10px] font-bold text-zinc-600 uppercase tracking-[0.2em]">同盟イベント</p>
+                <p class="text-[11px] text-zinc-600 leading-relaxed mt-1 mb-2">戦略の押し付けではなく、情報共有が目的です。使えそうなところだけ拾って下さい。</p>
+                <div class="space-y-1">
+                    <a class="flex justify-between items-center py-4 border-b chic-border hover:text-white transition-colors group">
+                        <button
+                            type="button"
+                            id="expand-sword"
+                            class="text-lg font-medium tracking-tight flex items-center gap-2 group focus:outline-none"
+                            aria-expanded="false"
+                            aria-controls="sword-options"
+                        >
+                            聖剣争奪戦
+                        </button>
+                        <div id="sword-options" class="hidden mt-2 pl-4 space-y-1">
+                            <a href="swordland/index.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">ゲーム進行</a>
+                            <a href="swordland/rally.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">都市攻撃の考え方</a>
+                            <a href="swordland/facility_control.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">施設攻撃・駐屯の考え方</a>
+                        </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const expandBtn = document.getElementById("expand-sword");
+                                const expandContent = document.getElementById("sword-options");
+                                expandBtn.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    expandContent.classList.toggle("hidden");
+                                    expandBtn.setAttribute('aria-expanded', !expandContent.classList.contains("hidden"));
+                                });
+                            });
+                        </script>
+                    </a>
+                    <a class="flex justify-between items-center py-4 border-b chic-border hover:text-white transition-colors group">
+                        <button
+                            type="button"
+                            id="expand-tri"
+                            class="text-lg font-medium tracking-tight flex items-center gap-2 group focus:outline-none"
+                            aria-expanded="false"
+                            aria-controls="tri-options"
+                        >
+                            三盟争覇戦
+                        </button>
+                        <div id="tri-options" class="hidden mt-2 pl-4 space-y-1">
+                            <a href="tri_alliance/progress.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">ゲームの進行</a>
+                            <a href="tri_alliance/battle_mechanics.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">戦闘解説</a>
+                        </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const expandBtn = document.getElementById("expand-tri");
+                                const expandContent = document.getElementById("tri-options");
+                                expandBtn.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    expandContent.classList.toggle("hidden");
+                                    expandBtn.setAttribute('aria-expanded', !expandContent.classList.contains("hidden"));
+                                });
+                            });
+                        </script>
+                    </a>
+                </div>
             </div>
-            <div class="text-sm leading-7 text-zinc-400">
-                <p class="mb-4">
-                    2週に1回の同盟イベント
-                </p>
-                <p class="text-zinc-600 italic font-medium">Under construction.</p>
-            </div>
-        </section>
 
-        <section id="alliance" class="scroll-mt-24">
-            <div class="mb-4 flex items-center space-x-2">
-                <span class="text-[10px] font-bold text-zinc-500 border border-zinc-700 px-1.5 py-0.5 rounded tracking-tighter uppercase">02</span>
-                <h3 class="text-xl font-bold text-white tracking-tight">三盟争覇戦_Tri-Alliance Clash</h3>
+            <!-- 指南 -->
+            <div>
+                <p class="text-[10px] font-bold text-zinc-600 uppercase tracking-[0.2em]">編成方針</p>
+                <p class="text-[11px] text-zinc-600 leading-relaxed mt-1 mb-2">足並みが揃うほど、守りは強くなります。</p>
+                <div class="space-y-1">
+                    <a class="flex justify-between items-center py-4 border-b chic-border hover:text-white transition-colors group">
+                        <button
+                            type="button"
+                            id="expand-garrison"
+                            class="text-lg font-medium tracking-tight flex items-center gap-2 group focus:outline-none"
+                            aria-expanded="false"
+                            aria-controls="garrison-options"
+                        >
+                            王城戦
+                        </button>
+                        <div id="garrison-options" class="hidden mt-2 pl-4 space-y-1">
+                            <a href="Garrison_Defense/60/40/00_Garrison_Guide.html" class="block text-sm font-medium text-zinc-300 hover:text-white px-2 py-1 rounded transition-colors">王城駐屯 60/40/00編成</a>
+                        </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const expandBtn = document.getElementById("expand-garrison");
+                                const expandContent = document.getElementById("garrison-options");
+                                expandBtn.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    expandContent.classList.toggle("hidden");
+                                    expandBtn.setAttribute('aria-expanded', !expandContent.classList.contains("hidden"));
+                                });
+                            });
+                        </script>
+                    </a>
+                </div>
             </div>
-            <div class="text-sm leading-7 text-zinc-400">
-                <p class="mb-4">
-                    4週1回の同盟イベント（戦術・ゲーム進行プランを公開予定です）
-                </p>
-                <p class="text-zinc-600 italic font-medium">Under construction.</p>
-            </div>
+
         </section>
 
     </main>
